@@ -1,3 +1,6 @@
+<?php
+$_SESSION['php'] = true;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: rgb(255,255,255,0.5);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand"><img src="IMG/xicara-de-cafe.png" alt="" srcset="" width="40" height="35"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,6 +35,7 @@
         </div>
     </nav>
     <div class="container">
+        <h1 id="txt-php">O SERVIDOR SUPORTA PHP</h1>
         <div class="row" >
             <div class="col" id="centralizar">
                 <div class="produto">
@@ -114,6 +119,32 @@
             </div>
         </div>
     </div>
+    <footer class="rodape">
+        <div class="container">
+            <div class="row">
+                <div class="col" id="centralizar">
+                    <img src="IMG/garcom.png" alt="" srcset="" class="imagem-rodape">
+                </div>
+                <div class="col" id="centralizar">
+                    <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo maxime rem dicta ipsa quo, aliquid explicabo a odio voluptates, reprehenderit temporibus in facere vel modi delectus praesentium, eos unde quia.Lorem
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, suscipit nostrum. Ratione aliquam aspernatur fuga fugiat expedita incidunt deleniti illo dolorum suscipit ipsam, beatae nulla. Fugit quisquam velit aperiam ab!</p>
+                </div>
+                <div class="col" id="centralizar">
+                    <img src="IMG/garconete.png" alt="" srcset="" class="imagem-rodape">
+                </div>
+            </div>
+            <!-- <div class="row border-top">
+                <i class="bi bi-facebook"></i>
+            </div> -->
+        </div>
+    </footer>
+    <script>
+    <?php if(isset($_SESSION['php']) == true ){ ?> 
+        $("#txt-php").show(); 
+    <?php } else { ?>
+        $("#txt-php").hide();  
+    <?php } ?>
+    </script>
 
     <script src="JS/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
