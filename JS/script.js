@@ -1,3 +1,3 @@
-$(document).ready(function(){
-    alert("A folha de script está carregada!");
-})
+// $(document).ready(function(){
+//     alert("A folha de script está carregada!");
+// })
