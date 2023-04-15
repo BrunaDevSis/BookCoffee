@@ -1,3 +1,6 @@
+<?php
+$_SESSION['php'] = true;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +36,7 @@
         </div>
     </nav>
     <div class="container">
+        <h1 id="txt-php">O SERVIDOR SUPORTA PHP</h1>
         <div class="row" >
             <div class="col" id="centralizar">
                 <div class="produto">
@@ -135,6 +139,14 @@
             </div> -->
         </div>
     </footer>
+    <script>
+    <?php if(isset($_SESSION['php']) == true ){ ?> 
+        $("#txt-php").show(); 
+    <?php } else { ?>
+        $("#txt-php").hide();  
+    <?php } ?>
+    </script>
+
     <script src="JS/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
