@@ -22,18 +22,17 @@ body{
 }
 
 #caixa{
-    background-color: rgba(255, 255, 255, 0.9);
-    padding:20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding:0px 20px 20px 20px;
     width:100%;
     margin-left:0px;
-    margin-bottom:50px;
-    border-radius: 0px 10px 10px 10px;
 }
 
 #titulo{
     background-color: rgb(255, 255, 255);
-    width:auto;
-    border-radius: 5px 5px 0px 0px;
+    width:100%;
+    border-radius: 5px;
+    box-shadow: -5px 0px 30px -5px black;
     margin-left: 0px;
     margin-top:20px;
     padding:10px;
