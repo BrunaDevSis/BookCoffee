@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to bottom, rgb(137, 85, 32), rgb(208, 137, 67), rgb(137, 85, 32));
+    background-image: url("../IMG/coffee.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,14 +21,31 @@ body{
     display:flex;
 }
 
+#caixa{
+    background-color: rgba(255, 255, 255, 0.9);
+    padding:20px;
+    width:100%;
+    margin-left:0px;
+    margin-bottom:50px;
+    border-radius: 0px 10px 10px 10px;
+}
+
+#titulo{
+    background-color: rgb(255, 255, 255);
+    width:auto;
+    border-radius: 5px 5px 0px 0px;
+    margin-left: 0px;
+    margin-top:20px;
+    padding:10px;
+}
+
 .produto{
     height:auto;
     border-radius: 5px 5px 20px 20px;
     width:250px;
     background-color: bisque;
-    margin-top:50px;
-    margin-bottom:50px;
     padding-bottom:10px;
+    margin: 20px 0px 20px 0px;
 }
 
 .foto-produto{
@@ -61,7 +78,7 @@ body{
 }
 
 .rodape{
-    background-color: rgb(255,255,255);
+    background-color:#F8F9FA;
     padding-top:50px;
 }
 
@@ -77,6 +94,13 @@ body{
     color:white;
     border-style:none;
     padding:7px;
+}
+
+.voltar-topo:hover{
+    background-color: rgb(44, 39, 39);
+    transition: all 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 @media (min-width:548px) and (max-width:767px){
