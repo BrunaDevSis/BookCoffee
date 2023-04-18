@@ -37,3 +37,20 @@ function abrir_modal(id,val){
             break;
     }
 }
+
+function incrementarQuantidadeProduto() {
+    var quantidade1 = $("#quant").val();
+    var quantidade = parseInt(quantidade1);
+    $("#quant").val(quantidade+1);
+}
+
+function decrementarQuantidadeProduto() {
+    var quantidade = $("#quant").val();
+    parseInt(quantidade);
+
+    if (quantidade == 1) {
+        $('#modal-pedido').modal('hide');
+    } else {
+        $("#quant").val(quantidade-1);
+    }
+}

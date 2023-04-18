@@ -162,19 +162,19 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">Adicionar ao pedido</h5>
+                <h4 class="modal-title" id="add-produto"></h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <div class="row">
-                    
-                        <img src="" alt="" srcset="" id="add-img">
-             
-                    
-                        <h4 id="add-produto" class="nome-produto"></h4>
-                        <p style="display:inline-block">R$</p><p id="add-preco" style="display:inline-block"></p>
-             
-                </div>
+                    <img src="" alt="" srcset="" id="add-img"><br><br>
+                    <h5 style="display:inline-block">Valor unitário: R$</h5><h5 id="add-preco" style="display:inline-block"></h5>
+                    <div class="row border-top">
+                        <div class="btn-quantidade">
+                            <button type="button" onclick="decrementarQuantidadeProduto()" id="menos" class="btn-menos" value="-">-</button>
+                            <input type="text" name="quantidade" size="1" value="1" id="quant" readonly/>
+                            <button type="button" onclick="incrementarQuantidadeProduto()" id="mais" class="btn-mais" value="+" >+</button>
+                        </div>
+                    </div>
               </div>
               <div class="modal-footer">
                 <button class="btn btn-primary">Adicionar</button>

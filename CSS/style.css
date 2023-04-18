@@ -51,6 +51,45 @@ body{
     padding:10px;
 }
 
+#quant{
+    text-align:center;
+    margin: 0px -5px 0px -4px;
+    padding:5px;
+    width:40px;
+}
+
+.btn-mais{
+    background-color: #F6EAEA;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    padding:7px;
+    width:30px;
+}
+
+.btn-menos{
+    background-color: #F6EAEA;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    padding:7px;
+    width:30px;
+}
+
+.btn-mais:hover{
+    background-color: #efdada;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn-menos:hover{
+    background-color: #efdada;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn-quantidade{
+    display:inline-block;
+    margin-top:15px;
+}
 .produto{
     height:auto;
     border-radius: 5px 5px 20px 20px;
