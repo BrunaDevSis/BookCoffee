@@ -1,10 +1,13 @@
 function abrir_modal(id,val){
-    var val2 = parseFloat(val).toFixed(2);
+    var inserirValor = parseFloat(val);
+    var valorFormatado = inserirValor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
     $('#modal-pedido').modal('show');
     $("#add-produto").html(id); 
-    $("#add-preco").val(val2); 
-    $("#add-total").val(val2);
-    $("#add-total-input").val(val2);
+    $("#add-preco").val(valorFormatado); 
+    $("#add-total").val(valorFormatado);
+    $("#add-total-input").val(inserirValor);
+    $("#add-preco-input").val(inserirValor);
     switch (id) {
         case "Expresso":
             $("#add-img").attr("src", "IMG/cafeexpresso.jpg"); 
@@ -42,7 +45,7 @@ function abrir_modal(id,val){
 
 function incrementarQuantidadeProduto() {
     var quantidade1 = $("#quant").val();
-    var precototal = $("#add-preco").val();
+    var precototal = $("#add-preco-input").val();
     var total = parseFloat(precototal);
     var quantidade = parseInt(quantidade1);
     $("#quant").val(quantidade+1);
@@ -54,7 +57,7 @@ function incrementarQuantidadeProduto() {
         $("#add-total").val(totalFormatado);
     } else {
         var quantidade1 = $("#quant").val();
-        var precototal = $("#add-preco").val();
+        var precototal = $("#add-preco-input").val();
         var total = parseFloat(precototal);
         var quantidade = parseInt(quantidade1);
 
@@ -73,7 +76,7 @@ function decrementarQuantidadeProduto() {
     if (quantidade == 1) {
         $('#modal-pedido').modal('hide');
     } else {
-        var precototal = $("#add-preco").val();
+        var precototal = $("#add-preco-input").val();
         var preco = $("#add-total-input").val();
         var total = parseFloat(precototal);
         var total2 = parseFloat(preco);
