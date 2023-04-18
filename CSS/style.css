@@ -6,6 +6,12 @@ body{
     background-repeat: no-repeat;
 }
 
+#header{
+    z-index:5;
+    position: -webkit-sticky; /* Necessário para funcionar no Safari */
+    position: sticky;
+    top: 0;
+}
 #text-login{
     margin-left:-15px;
 }
