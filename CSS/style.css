@@ -53,9 +53,19 @@ body{
 
 #quant{
     text-align:center;
-    margin: 0px -4px 0px -5px;
+    margin: 0px -4px 0px -4px;
     padding:5px;
     width:40px;
+}
+
+#add-total{
+    border:none;
+    font-weight: 500;
+}
+
+#add-preco{
+    border:none;
+    font-weight: 500;
 }
 
 .btn-mais{
@@ -87,8 +97,8 @@ body{
 }
 
 .btn-quantidade{
-    display:inline-block;
     margin-top:15px;
+    float:right;
 }
 .produto{
     height:auto;

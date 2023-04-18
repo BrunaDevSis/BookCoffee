@@ -1,8 +1,10 @@
 function abrir_modal(id,val){
+    var val2 = parseFloat(val).toFixed(2);
     $('#modal-pedido').modal('show');
     $("#add-produto").html(id); 
-    $("#add-preco").html(val); 
-    
+    $("#add-preco").val(val2); 
+    $("#add-total").val(val2);
+    $("#add-total-input").val(val2);
     switch (id) {
         case "Expresso":
             $("#add-img").attr("src", "IMG/cafeexpresso.jpg"); 
@@ -40,8 +42,28 @@ function abrir_modal(id,val){
 
 function incrementarQuantidadeProduto() {
     var quantidade1 = $("#quant").val();
+    var precototal = $("#add-preco").val();
+    var total = parseFloat(precototal);
     var quantidade = parseInt(quantidade1);
     $("#quant").val(quantidade+1);
+    if (quantidade == 1) {
+        var inserirTotal = parseFloat(total+total);
+        var totalFormatado = inserirTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        $("#add-total-input").val(inserirTotal);
+        $("#add-total").val(totalFormatado);
+    } else {
+        var quantidade1 = $("#quant").val();
+        var precototal = $("#add-preco").val();
+        var total = parseFloat(precototal);
+        var quantidade = parseInt(quantidade1);
+
+        var inserirTotal = parseFloat(total*quantidade);
+        var totalFormatado = inserirTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        $("#add-total").val(totalFormatado); 
+        $("#add-total-input").val(inserirTotal);  
+    }
 }
 
 function decrementarQuantidadeProduto() {
@@ -51,6 +73,15 @@ function decrementarQuantidadeProduto() {
     if (quantidade == 1) {
         $('#modal-pedido').modal('hide');
     } else {
+        var precototal = $("#add-preco").val();
+        var preco = $("#add-total-input").val();
+        var total = parseFloat(precototal);
+        var total2 = parseFloat(preco);
+
+        var inserirTotal = parseFloat(total2-total);
+        var totalFormatado = inserirTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         $("#quant").val(quantidade-1);
+        $("#add-total-input").val(inserirTotal);
+        $("#add-total").val(totalFormatado);
     }
 }

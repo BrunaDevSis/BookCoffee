@@ -43,7 +43,7 @@
                         <img src="IMG/cafeexpresso.jpg" alt="" srcset="" class="foto-produto">
                         <h4 class="nome-produto" id="val-produto">R$5.00</h4>
                         <center>
-                            <button class="botao-produto" id="Expresso" value="5.00" onclick="abrir_modal(this.id,this.value)">+</button>
+                            <button class="botao-produto" id="Expresso" value="5" onclick="abrir_modal(this.id,this.value)">+</button>
                         </center>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <img src="IMG/cafegoumert.jpg" alt="" srcset="" class="foto-produto">
                         <h4 class="nome-produto">R$10.00</h4>
                         <center>
-                            <button class="botao-produto" id="Gourmet" value="10.00" onclick="abrir_modal(this.id,this.value)">+</button>
+                            <button class="botao-produto" id="Gourmet" value="10" onclick="abrir_modal(this.id,this.value)">+</button>
                         </center>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                         <img src="IMG/capuccino.jpg" alt="" srcset="" class="foto-produto">
                         <h4 class="nome-produto">R$7.00</h4>
                         <center>
-                            <button class="botao-produto" id="Capuccino" value="7.00" onclick="abrir_modal(this.id,this.value)">+</button>
+                            <button class="botao-produto" id="Capuccino" value="7" onclick="abrir_modal(this.id,this.value)">+</button>
                         </center>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                         <img src="IMG/tradicional.jpeg" alt="" srcset="" class="foto-produto">
                         <h4 class="nome-produto">R$2.00</h4>
                         <center>
-                            <button class="botao-produto" id="Tradicional" value="2.00" onclick="abrir_modal(this.id,this.value)">+</button>
+                            <button class="botao-produto" id="Tradicional" value="2" onclick="abrir_modal(this.id,this.value)">+</button>
                         </center>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                         <img src="IMG/hamburguer.jpg" alt="" srcset="" class="foto-produto">
                         <h4 class="nome-produto">R$15.00</h4>
                         <center>
-                            <button class="botao-produto" id="Hambúrguer" value="15.00" onclick="abrir_modal(this.id,this.value)">+</button>
+                            <button class="botao-produto" id="Hambúrguer" value="15" onclick="abrir_modal(this.id,this.value)">+</button>
                         </center>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                         <img src="IMG/pastel.jpg" alt="" srcset="" class="foto-produto">
                         <h4 class="nome-produto">R$7.00</h4>
                         <center>
-                            <button class="botao-produto" id="Pastel" value="7.00" onclick="abrir_modal(this.id,this.value)">+</button>
+                            <button class="botao-produto" id="Pastel" value="7" onclick="abrir_modal(this.id,this.value)">+</button>
                         </center>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                         <img src="IMG/kibe.jpg" alt="" srcset="" class="foto-produto">
                         <h4 class="nome-produto">R$5.00</h4>
                         <center>
-                            <button class="botao-produto" id="Kibe" value="5.00" onclick="abrir_modal(this.id,this.value)">+</button>
+                            <button class="botao-produto" id="Kibe" value="5" onclick="abrir_modal(this.id,this.value)">+</button>
                         </center>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                         <img src="IMG/coxinha.jpeg" alt="" srcset="" class="foto-produto">
                         <h4 class="nome-produto">R$6.00</h4>
                         <center>
-                            <button class="botao-produto" id="Coxinha" value="6.00" onclick="abrir_modal(this.id,this.value)">+</button>
+                            <button class="botao-produto" id="Coxinha" value="6" onclick="abrir_modal(this.id,this.value)">+</button>
                         </center>
                     </div>
                 </div>
@@ -163,16 +163,24 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title" id="add-produto"></h4>
+                <h4 style="display:inline-block;margin-top:6px;">: R$</h4>
+                <h4 style="display:inline-block;margin-top:6px;">
+                <input type="text" id="add-preco" size="2" readonly/></h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                     <img src="" alt="" srcset="" id="add-img"><br><br>
-                    <h5 style="display:inline-block">Valor unitário: R$</h5><h5 id="add-preco" style="display:inline-block"></h5>
                     <div class="row border-top">
-                        <div class="btn-quantidade">
-                            <button type="button" onclick="decrementarQuantidadeProduto()" id="menos" class="btn-menos" value="-">-</button>
-                            <input type="text" name="quantidade" size="1" value="1" id="quant" readonly/>
-                            <button type="button" onclick="incrementarQuantidadeProduto()" id="mais" class="btn-mais" value="+" >+</button>
+                        <div class="col">
+                            <input type="hidden" id="add-total-input" size="2" readonly/></h4>
+                            <h3 style="display:inline-block;margin-top:20px;">Total: <input type="text" name="quantidade" size="5" id="add-total" readonly/></h3>
+                        </div>
+                        <div class="col">
+                            <div class="btn-quantidade">
+                                <button type="button" onclick="decrementarQuantidadeProduto()" id="menos" class="btn-menos" value="-">-</button>
+                                <input type="text" name="quantidade"  value="1" id="quant" readonly/>
+                                <button type="button" onclick="incrementarQuantidadeProduto()" id="mais" class="btn-mais" value="+" >+</button>
+                            </div>
                         </div>
                     </div>
               </div>
