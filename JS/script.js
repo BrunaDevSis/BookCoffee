@@ -88,3 +88,7 @@ function decrementarQuantidadeProduto() {
         $("#add-total").val(totalFormatado);
     }
 }
+
+function resetarQuantidade(){
+    $("#quant").val(1);
+}

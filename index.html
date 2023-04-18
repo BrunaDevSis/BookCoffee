@@ -167,7 +167,7 @@
                 <h4 style="display:inline-block;margin-top:6px;">
                 <input type="text" id="add-preco" size="5" readonly/></h4>
                 <input type="hidden" id="add-preco-input" size="2" readonly/></h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="resetarQuantidade()"></button>
               </div>
               <div class="modal-body">
                     <img src="" alt="" srcset="" id="add-img"><br><br>
@@ -187,7 +187,7 @@
               </div>
               <div class="modal-footer">
                 <button class="btn btn-primary">Adicionar</button>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="resetarQuantidade()">Cancelar</button>
               </div>
             </div>
         </div>
