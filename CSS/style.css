@@ -1,9 +1,10 @@
 body{
-    background-image: url("../IMG/coffee.jpg");
-    background-attachment: fixed;
+    background-color: brown;
+    /* background-image: url("../IMG/coffee.jpg"); */
+    /* background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 #header{
