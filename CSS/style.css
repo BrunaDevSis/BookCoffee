@@ -1,3 +1,30 @@
+@media (max-width:425px){
+    #total-texto{
+        font-size:16px;
+    }
+}
+
+@media (min-width:548px) and (max-width:767px){
+    #produto{
+        display:inline-block !important;
+    }
+}
+
+@media (max-width:768px){
+    #colunas{
+        display:block !important;
+        justify-content:center;
+        align-items:center;
+    }
+}
+
+@media (max-width:576px){
+    #caixa{
+        margin-bottom:0px !important;
+        border-radius: 0px 0px 0px 0px !important;
+    }
+}
+
 body{
     background-color: brown;
     /* background-image: url("../IMG/coffee.jpg"); */
@@ -165,25 +192,4 @@ body{
     transition: all 0.3s;
     transform: scale(1.1);
     cursor: pointer;
-}
-
-@media (min-width:548px) and (max-width:767px){
-    #produto{
-        display:inline-block !important;
-    }
-}
-
-@media (max-width:768px){
-    #colunas{
-        display:block !important;
-        justify-content:center;
-        align-items:center;
-    }
-}
-
-@media (max-width:576px){
-    #caixa{
-        margin-bottom:0px !important;
-        border-radius: 0px 0px 0px 0px !important;
-    }
 }
