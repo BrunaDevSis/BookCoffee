@@ -1,13 +1,38 @@
-function abrir_modal(id,val){
-    var inserirValor = parseFloat(val);
-    var valorFormatado = inserirValor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+$(document).ready(function(){
+    if(sessionStorage.getItem("pedido") == true){
+        $(".pedido").show(); 
+    } else {
+        $(".pedido").hide(); 
+    }
+})
 
+$("#adicionar-produto").click(function(){
+    var nome_produto = $("#add-produto").html();
+    sessionStorage.setItem("pedido", nome_produto);
+    var teste = sessionStorage.getItem("pedido");
+    console.log(teste);
+    $("#n-pedido").html(teste); 
+
+    $('#modal-pedido').modal('hide');
+})
+
+function abrir_modal(id,val){
+    var quantidade1 = $("#quant").val();
+
+    var quantidade = parseInt(quantidade1);
+    var inserirValor2 = parseFloat(val);
+    var inserirValor = parseFloat(val);
+    inserirValor = inserirValor*quantidade;
+    var valorFormatado = inserirValor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    var valorFormatado2 = inserirValor2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    
     $('#modal-pedido').modal('show');
     $("#add-produto").html(id); 
-    $("#add-preco").val(valorFormatado); 
     $("#add-total").val(valorFormatado);
     $("#add-total-input").val(inserirValor);
-    $("#add-preco-input").val(inserirValor);
+    $("#add-preco").val(valorFormatado2); 
+    $("#add-preco-input").val(inserirValor2);
+    
     switch (id) {
         case "Expresso":
             $("#add-img").attr("src", "IMG/cafeexpresso.jpg"); 

@@ -95,6 +95,15 @@ body{
     font-weight: 500;
 }
 
+.pedido{
+    background-color: rgb(113, 170, 113);
+    width: 100%;
+    height:auto;
+    margin: 10px 0px 10px 0px;
+    border-radius:2px;
+    color:white;
+}
+
 .btn-mais{
     background-color: #F6EAEA;
     border: none;
