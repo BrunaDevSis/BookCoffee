@@ -34,9 +34,12 @@
     <div class="container">
         <div class="row">
             <div class="pedido">
-                <h4 id="off"><img src="IMG/cardapio.png" alt="" srcset="" width="40" height="40">Seu pedido em andamento aparecerá aqui!</h4>
-                <p id="n-pedido"></p>
+                <div id="off">
+                    <h4><img src="IMG/cardapio.png" alt="" srcset="" width="40" height="40">Seu pedido em andamento aparecerá aqui!</h4>
+                </div>
             </div>
+             <tbody id="corpoTabela">
+                </tbody>
         </div>
         <div class="row" >
             <div class="row" id="caixa">
@@ -176,7 +179,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="resetarQuantidade()"></button>
               </div>
               <div class="modal-body">
-                    <img src="" alt="" srcset="" id="add-img"><br><br>
+                    <img src="" alt="" srcset="" id="add-img" value=""><br><br>
                     <div class="row border-top">
                         <div class="col">
                             <input type="hidden" id="add-total-input" size="2" readonly/></h4>
