@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header">
         <div class="container-fluid">
-          <a class="navbar-brand"><img src="IMG/xicara-de-cafe.png" alt="" srcset="" width="40" height="35"></a>
+          <a class="navbar-brand"><img src="IMG/xicara-de-cafe.png" alt="" srcset="" width="40" height="40"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -34,6 +34,7 @@
     <div class="container">
         <div class="row">
             <div class="pedido">
+                <h4 id="off"><img src="IMG/cardapio.png" alt="" srcset="" width="40" height="40">Seu pedido em andamento aparecerá aqui!</h4>
                 <p id="n-pedido"></p>
             </div>
         </div>
@@ -191,8 +192,8 @@
                     </div>
               </div>
               <div class="modal-footer">
-                <button class="btn btn-primary">Adicionar</button>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="resetarQuantidade()">Cancelar</button>
+                    <button class="btn btn-primary" id="adicionar-produto">Adicionar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="resetarQuantidade()">Cancelar</button>
               </div>
             </div>
         </div>

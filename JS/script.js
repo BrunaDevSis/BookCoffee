@@ -1,20 +1,25 @@
+// --------------
 $(document).ready(function(){
-    if(sessionStorage.getItem("pedido") == true){
-        $(".pedido").show(); 
+    if(localStorage.getItem("pedido") == true){
+        $("#off").hide(); 
+        $("#n-pedido").show(); 
     } else {
-        $(".pedido").hide(); 
+        $("#off").show(); 
+        $("#n-pedido").hide(); 
     }
 })
 
 $("#adicionar-produto").click(function(){
     var nome_produto = $("#add-produto").html();
-    sessionStorage.setItem("pedido", nome_produto);
-    var teste = sessionStorage.getItem("pedido");
-    console.log(teste);
+    localStorage.setItem("pedido", nome_produto);
+    var teste = localStorage.getItem("pedido");
+    $("#off").hide(); 
+    $("#n-pedido").show(); 
     $("#n-pedido").html(teste); 
-
     $('#modal-pedido').modal('hide');
+
 })
+//  --------------
 
 function abrir_modal(id,val){
     var quantidade1 = $("#quant").val();
@@ -32,7 +37,7 @@ function abrir_modal(id,val){
     $("#add-total-input").val(inserirValor);
     $("#add-preco").val(valorFormatado2); 
     $("#add-preco-input").val(inserirValor2);
-    
+
     switch (id) {
         case "Expresso":
             $("#add-img").attr("src", "IMG/cafeexpresso.jpg"); 
