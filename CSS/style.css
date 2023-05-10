@@ -46,6 +46,15 @@ body{
     background-size: cover;
     background-repeat: no-repeat; */
 }
+#off{
+    background-color: rgb(113, 170, 113);
+    width: 100%;
+    height:auto;
+    margin: 10px 0px 10px 0px;
+    border-radius:2px;
+    color:white;
+    padding: 10px 5px 3px 5px;
+}
 
 #add-img{
     width:100%;
@@ -145,6 +154,41 @@ body{
 }
 
 #botao-selected:hover{
+    background-color: rgb(116, 30, 30);
+    transition: all 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#botao-select-off{
+    padding:10px 10px 10px 10px;
+    border-radius:100%;
+    width:40px;
+    height: 40px;
+    border-style:none;
+    color:white;
+    background-color:brown;
+}
+
+#botao-select-off:hover{
+    background-color: rgb(116, 30, 30);
+    transition: all 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+#botao-selected-off{
+    padding:10px 10px 10px 10px;
+    border-radius:100%;
+    width:40px;
+    height: 40px;
+    border-style:none;
+    color:white;
+    background-color:brown;
+}
+
+#botao-selected-off:hover{
     background-color: rgb(116, 30, 30);
     transition: all 0.3s;
     transform: scale(1.1);
