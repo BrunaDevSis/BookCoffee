@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    // localStorage.clear(); 
+    localStorage.clear(); 
+    $(".botao-select").hide(); 
+    $("#botao-selected").hide(); 
     buscarConteudo();
 })
 
@@ -65,6 +67,8 @@ function buscarConteudo(){
         </div>`
         })
 
+        $(".botao-select").show(); 
+        $("#botao-selected").show(); 
         $("#quant").val(1);
         $("#off").hide(); 
         $("#on").show();  

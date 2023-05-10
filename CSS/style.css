@@ -25,6 +25,19 @@
     }
 }
 
+@media (max-width:992px){
+   .botao-select{
+        display: none !important;
+   }
+}
+
+
+@media (min-width:992px){
+    #botao-selected{
+        display: none !important;
+    }
+ }
+
 body{
     background-color: brown;
     /* background-image: url("../IMG/coffee.jpg"); */
@@ -119,6 +132,23 @@ body{
     margin-bottom:10px;
     border-radius: 2px 2px 10px 10px;
     margin-right:10px;
+}
+
+#botao-selected{
+    padding:10px 10px 10px 10px;
+    border-radius:100%;
+    width:40px;
+    height: 40px;
+    border-style:none;
+    color:white;
+    background-color:brown;
+}
+
+#botao-selected:hover{
+    background-color: rgb(116, 30, 30);
+    transition: all 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .pedido{
@@ -230,6 +260,23 @@ body{
 .nome-produto{
     text-align:center;
     padding:5px;
+}
+
+.botao-select{
+    padding:10px 10px 10px 10px;
+    border-radius:100%;
+    width:40px;
+    height: 40px;
+    border-style:none;
+    color:white;
+    background-color:brown;
+}
+
+.botao-select:hover{
+    background-color: rgb(116, 30, 30);
+    transition: all 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .botao-produto{
