@@ -1,10 +1,9 @@
 $(document).ready(function(){
-    // localStorage.clear();   
+    // localStorage.clear(); 
+    buscarConteudo();
 })
 
 $("#adicionar-produto").click(function(){
-    const andamento = document.getElementById('corpoTabela');
-
     let arraypedidos = [];
 
     if (localStorage.getItem('pedidos') != null) {
@@ -32,6 +31,10 @@ $("#adicionar-produto").click(function(){
     var infoJson = JSON.stringify(arraypedidos);
     localStorage.setItem("pedidos", infoJson);
 
+   buscarConteudo();
+})
+
+function buscarConteudo(){
     const arr = JSON.parse(localStorage.getItem('pedidos'));
     console.log(arr);
 
@@ -39,21 +42,36 @@ $("#adicionar-produto").click(function(){
         let tr = '';
         arr.map(conteudo => {
         tr += `
-        <ul class="list-group">
-            <li class="list-group-item"><img src="${conteudo.imagem_produto}"  width="40" height="40"></img</li>
-            <li class="list-group-item">${conteudo.nome_produto }</li>
-            <li class="list-group-item">${conteudo.val_unit_produto}</li>
-            <li class="list-group-item">${conteudo.val_total_produto}</li>
-            <li class="list-group-item">${conteudo.qtde_produto}</li>
-        </ul>`
+        <div id="pedido-ativo">
+            <div id="titulo-pedido">
+                <p>${conteudo.nome_produto }</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="${conteudo.imagem_produto}"  id="foto-pedido" ></img>
+                </div>
+                <div class="col-lg-6">
+                    <p>R$${conteudo.val_unit_produto}.00</p>
+                    <div class="btn-quantidade2">
+                        <button type="button" onclick="" id="menos2" class="btn-menos2" value="-">-</button>
+                        <input type="text" name="quantidade"  value="${conteudo.qtde_produto}" id="quant2" readonly/>
+                        <button type="button" onclick="" id="mais2" class="btn-mais2" value="+" >+</button>
+                    </div>
+                </div>
+            </div>
+            <div id="titulo-pedido">
+                <p>Subtotal: R$${conteudo.val_total_produto}.00</p></p>
+            </div>
+        </div>`
         })
-  
+
+        $("#quant").val(1);
         $("#off").hide(); 
         $("#on").show();  
         $('#modal-pedido').modal('hide');
         $(".pedido").html(tr);
     }
-})
+}
 
 function abrir_modal(id,val){
     var quantidade1 = $("#quant").val();
