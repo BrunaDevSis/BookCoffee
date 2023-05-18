@@ -1,4 +1,5 @@
 $(document).ready(function(){ 
+    // localStorage.clear();
     $(".pedido").hide(); 
     $("#off").hide(); 
     $(".botao-select").hide(); 

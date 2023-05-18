@@ -30,20 +30,13 @@
             </ul>
             <a aria-current="page" href="#" class="nav-link active"><span id="text-login" class="navbar-text">Login</span></a>
             <a aria-current="page" href="#" class="nav-link active"><span id="text-login" class="navbar-text">Sair</span></a>
-            <button class="botao-select"><i class="bi bi-arrow-bar-up"></i></button>
-            <button id="botao-select-off"><i class="bi bi-arrow-bar-down"></i></i></button>
+            <a aria-current="page" href="#" class="nav-link active" data-bs-toggle="modal" data-bs-target="#modal-pedido-andamento"><span id="text-login" class="navbar-text">Abrir Modal</span></a>
+            <!-- <button class="botao-select"><i class="bi bi-arrow-bar-up"></i></button>
+            <button id="botao-select-off"><i class="bi bi-arrow-bar-down"></i></i></button> -->
           </div>
         </div>
     </nav>
     <div class="container">
-        <div class="row">
-            <center>
-                <div id="off">
-                    <h5><img src="IMG/cardapio.png" alt="" srcset="" width="40" height="40">Seu pedido está em andamento!</h5>
-                </div>
-                <div class="pedido"></div>
-            </center>
-        </div>
         <div class="row" >
             <div class="row" id="caixa">
                 <div class="row" id="titulo">
@@ -204,6 +197,31 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modal-pedido-andamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">modal-lg
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Pedido em andamento</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                    <center>
+                        <div id="off">
+                            <h5><img src="IMG/cardapio.png" alt="" srcset="" width="40" height="40">Seu pedido está em andamento!</h5>
+                        </div>
+                        <div class="pedido"></div>
+                    </center>
+                </div>
+              </div>
+              <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok!</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
